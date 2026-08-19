@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>为分离而萃取——高三物质分离微专题</title>
+<title>为分离而蒸馏——高三物质分离微专题</title>
 <style>
   :root{
     --ink:#1f2937; --ink-soft:#4b5563; --ink-faint:#9ca3af;
@@ -18,147 +18,83 @@
     background:var(--bg); color:var(--ink); line-height:1.75; font-size:16px;
   }
   .maxw{max-width:1060px;margin:0 auto;padding:0 20px;}
-  /* ---------- header ---------- */
   header{
-    background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 60%,#0d9488 100%);
+    background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#0d9488 100%);
     color:#fff;padding:42px 0 34px;
   }
   header .tag{display:inline-block;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:2px 14px;font-size:13px;letter-spacing:2px;margin-bottom:14px;}
   header h1{font-size:32px;font-weight:700;letter-spacing:1px;}
   header .sub{margin-top:10px;font-size:15px;opacity:.92;}
   header .meta{margin-top:16px;font-size:13px;opacity:.85;display:flex;flex-wrap:wrap;gap:14px;}
-  /* ---------- nav ---------- */
-  nav{
-    position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);
-    box-shadow:0 1px 6px rgba(0,0,0,.05);
-  }
+  nav{position:sticky;top: 0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 1px 6px rgba(0,0,0,.05);}
   nav .maxw{display:flex;gap:4px;overflow-x:auto;}
-  nav a{
-    white-space:nowrap;padding:12px 16px;font-size:14.5px;color:var(--ink-soft);
-    text-decoration:none;border-bottom:3px solid transparent;cursor:pointer;
-  }
+  nav a{white-space:nowrap;padding:12px 16px;font-size:14.5px;color:var(--ink-soft);text-decoration:none;border-bottom:3px solid transparent;cursor:pointer;}
   nav a:hover{color:var(--blue);}
   nav a.on{color:var(--blue);border-bottom-color:var(--blue);font-weight:700;}
-  /* ---------- sections ---------- */
   section{padding:44px 0 8px;}
   .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;}
   .sec-num{font-size:13px;color:#fff;background:var(--blue);border-radius:6px;padding:2px 10px;letter-spacing:1px;}
   .sec-head h2{font-size:24px;color:#1e3a8a;}
   .sec-lead{color:var(--ink-soft);font-size:15px;margin-bottom:22px;}
-  .card{
-    background:var(--panel);border:1px solid var(--line);border-radius:12px;
-    padding:22px 24px;margin-bottom:20px;
-  }
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:20px;}
   .card h3{font-size:17px;margin-bottom:12px;color:#1e3a8a;display:flex;align-items:center;gap:8px;}
   .hint{font-size:13.5px;color:var(--ink-faint);margin-top:10px;}
-  .qbox{
-    background:var(--amber-bg);border-left:4px solid var(--amber);
-    padding:12px 18px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15.5px;
-  }
+  .qbox{background:var(--amber-bg);border-left:4px solid var(--amber);padding:12px 18px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15.5px;}
   .qbox b{color:var(--amber);}
   .kbd{display:inline-block;background:#fff;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 8px;font-family:Consolas,monospace;font-size:13.5px;}
-  /* ---------- buttons ---------- */
-  .btn{
-    display:inline-block;background:var(--blue);color:#fff;border:none;border-radius:8px;
-    padding:9px 22px;font-size:14.5px;cursor:pointer;font-family:inherit;margin:3px 6px 3px 0;
-    transition:transform .1s, box-shadow .1s;
-  }
+  .btn{display:inline-block;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:9px 22px;font-size:14.5px;cursor:pointer;font-family:inherit;margin:3px 6px 3px 0;transition:transform .1s,box-shadow .1s;}
   .btn:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(37,99,235,.3);}
   .btn:disabled{background:#cbd5e1;cursor:not-allowed;box-shadow:none;transform:none;}
   .btn.ghost{background:#fff;color:var(--blue);border:1px solid var(--blue);}
   .btn.teal{background:var(--teal);}
   .btn.warn{background:var(--amber);}
-  /* ---------- funnel lab ---------- */
+  /* lab */
   .lab{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;}
-  .lab-stage{
-    flex:0 0 340px;background:#fff;border:1px solid var(--line);border-radius:12px;
-    padding:14px;display:flex;flex-direction:column;align-items:center;
-  }
+  .lab-stage{flex:0 0 340px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;align-items:center;}
   .lab-panel{flex:1;min-width:300px;}
-  .status{
-    background:var(--blue-bg);border-radius:8px;padding:12px 16px;font-size:14.5px;
-    margin-top:10px;min-height:76px;
-  }
+  .status{background:var(--blue-bg);border-radius:8px;padding:12px 16px;font-size:14.5px;margin-top:10px;min-height:96px;}
   .status .micro{color:var(--purple);font-size:13.5px;margin-top:6px;border-top:1px dashed var(--line);padding-top:6px;}
   .steps-rail{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
-  .pill{
-    font-size:12.5px;border-radius:999px;padding:3px 12px;border:1px solid var(--line);
-    color:var(--ink-faint);background:#fff;
-  }
+  .pill{font-size:12.5px;border-radius:999px;padding:3px 12px;border:1px solid var(--line);color:var(--ink-faint);background:#fff;}
   .pill.done{background:var(--green-bg);border-color:#86efac;color:var(--green);}
   .pill.cur{background:var(--blue-bg);border-color:#93c5fd;color:var(--blue);font-weight:700;}
-  /* ---------- generic quiz ---------- */
-  .opt{
-    display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);
-    border-radius:9px;padding:10px 16px;margin:8px 0;cursor:pointer;font-size:15px;
-    font-family:inherit;transition:border-color .15s;line-height:1.6;
-  }
+  /* generic quiz */
+  .opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:10px 16px;margin:8px 0;cursor:pointer;font-size:15px;font-family:inherit;transition:border-color .15s;line-height:1.6;}
   .opt:hover{border-color:var(--blue);}
   .opt.ok{border-color:var(--green);background:var(--green-bg);}
   .opt.no{border-color:var(--red);background:var(--red-bg);}
   .opt:disabled{cursor:default;}
-  .explain{
-    background:var(--teal-bg);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;
-    padding:12px 16px;font-size:14px;margin-top:12px;display:none;
-  }
+  .explain{background:var(--teal-bg);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;padding:12px 16px;font-size:14px;margin-top:12px;display:none;}
   .explain.show{display:block;}
   .explain b{color:var(--teal);}
-  .fillselect{
-    display:inline-block;min-width:120px;border:none;border-bottom:2px solid var(--blue);
-    background:var(--blue-bg);color:var(--blue);font-family:inherit;font-size:14.5px;
-    padding:1px 6px;border-radius:6px 6px 0 0;cursor:pointer;outline:none;
-  }
-  /* ---------- extractant cards ---------- */
+  .fillselect{display:inline-block;min-width:120px;border:none;border-bottom:2px solid var(--blue);background:var(--blue-bg);color:var(--blue);font-family:inherit;font-size:14.5px;padding: 1px 6px;border-radius:6px 6px 0 0;cursor:pointer;outline:none;}
+  /* variant cards */
   .ex-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;}
-  .ex-card{
-    background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:14px 16px;
-    cursor:pointer;transition:transform .12s;position:relative;
-  }
+  .ex-card{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer;transition:transform .12s;position:relative;}
   .ex-card:hover{transform:translateY(-2px);border-color:var(--blue);}
   .ex-card .t{font-weight:700;font-size:15px;}
   .ex-card .d{font-size:13px;color:var(--ink-soft);margin-top:4px;}
-  .ex-card .judge{
-    position:absolute;top:10px;right:12px;font-size:20px;width:28px;height:28px;
-    border-radius:50%;display:flex;align-items:center;justify-content:center;color:transparent;
-    background:#f1f5f9;
-  }
+  .ex-card .judge{position:absolute;top:10px;right:12px;font-size:20px;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:transparent;background:#f1f5f9;}
   .ex-card.yes .judge{background:var(--green-bg);color:var(--green);}
   .ex-card.no .judge{background:var(--red-bg);color:var(--red);}
-  /* ---------- sort game ---------- */
+  /* sort */
   .sort-list{list-style:none;}
-  .sort-item{
-    background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:10px 14px;
-    margin:8px 0;display:flex;align-items:center;gap:12px;cursor:grab;font-size:14.5px;
-  }
+  .sort-item{background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:10px 14px;margin:8px 0;display:flex;align-items:center;gap:12px;cursor:grab;font-size:14.5px;}
   .sort-item.dragging{opacity:.4;border-style:dashed;}
-  .sort-item .idx{
-    flex:0 0 26px;height:26px;border-radius:50%;background:var(--panel2);color:var(--ink-faint);
-    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
-  }
+  .sort-item .idx{flex:0 0 26px;height:26px;border-radius:50%;background:var(--panel2);color:var(--ink-faint);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;}
   .sort-item .mv{margin-left:auto;display:flex;gap:4px;}
-  .sort-item .mv button{
-    width:26px;height:26px;border:1px solid var(--line);background:#fff;border-radius:6px;
-    cursor:pointer;color:var(--ink-soft);font-size:14px;
-  }
+  .sort-item .mv button{width:26px;height:26px;border:1px solid var(--line);background:#fff;border-radius:6px;cursor:pointer;color:var(--ink-soft);font-size:14px;}
   .sort-check{margin-top:10px;font-size:14px;min-height:24px;}
-  /* ---------- decision tree ---------- */
+  /* tree */
   .tree{font-size:14.5px;}
-  .tnode{
-    background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 16px;
-    margin:8px 0;cursor:pointer;transition:.15s;
-  }
+  .tnode{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 16px;margin:8px 0;cursor:pointer;transition:.15s;}
   .tnode:hover{border-color:var(--blue);}
   .tnode.hot{border-color:var(--purple);background:var(--purple-bg);}
   .tnode .hd{display:flex;align-items:center;gap:8px;font-weight:700;}
   .tnode .arrow{color:var(--ink-faint);}
   .tnode .detail{display:none;margin-top:8px;font-size:13.5px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:8px;}
   .tnode.open .detail{display:block;}
-  /* ---------- score ---------- */
-  #scorebar{
-    position:fixed;right:18px;bottom:18px;z-index:60;background:#1e3a8a;color:#fff;
-    border-radius:999px;padding:8px 20px;font-size:14px;box-shadow:0 6px 18px rgba(30,58,138,.35);
-    cursor:pointer;
-  }
+  #scorebar{position:fixed;right:18px;bottom:18px;z-index:60;background:#1e3a8a;color:#fff;border-radius:999px;padding:8px 20px;font-size:14px;box-shadow:0 6px 18px rgba(30,58,138,.35);cursor:pointer;}
   #scorebar b{color:#fde047;font-size:16px;}
   .stat-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0;}
   .stat-chip{background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 14px;font-size:13.5px;}
@@ -172,10 +108,7 @@
   .fade-in{animation:fi .5s ease;}
   @keyframes fi{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
   footer{padding:30px 0 60px;color:var(--ink-faint);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:40px;}
-  @media(max-width:760px){
-    header h1{font-size:24px;}
-    .lab-stage{flex:1 1 100%;}
-  }
+  @media(max-width:760px){header h1{font-size:24px;}.lab-stage{flex:1 1 100%;}}
 </style>
 </head>
 <body>
@@ -183,12 +116,12 @@
 <header>
   <div class="maxw">
     <span class="tag">高三一轮复习 · 物质分离微专题</span>
-    <h1>为分离而萃取</h1>
-    <div class="sub">从福建海水提溴到苯酚废水处理 —— 用"溶解度差异"把目标物质从低浓度体系中"抓出来"</div>
+    <h1>为分离而蒸馏</h1>
+    <div class="sub">从《本草纲目》的"蒸烧"到海水淡化 —— 用"沸点差异"把互溶液体按挥发性分开</div>
     <div class="meta">
       <span>适用：高三中等生 · 1 课时</span>
-      <span>素材：人教版必修一 萃取与分液</span>
-      <span>真题：2023·福建卷 T8 ／ 2025·福建卷 T12</span>
+      <span>素材：人教版必修一 蒸馏 / 选必3 有机提纯</span>
+      <span>真题：2023·福建 T8 ／ 2024·福建 T8 ／ 2022 水蒸气蒸馏</span>
     </div>
   </div>
 </header>
@@ -198,222 +131,170 @@
     <a class="on" data-go="s0">① 情境导入</a>
     <a data-go="s1">② 本源问题链</a>
     <a data-go="s2">③ 原理实验室</a>
-    <a data-go="s3">④ 萃取剂选择</a>
+    <a data-go="s3">④ 装置与变式</a>
     <a data-go="s4">⑤ 操作解码</a>
-    <a data-go="s5">⑥ 知识结构树</a>
+    <a data-go="s5">⑥ 知识树</a>
     <a data-go="s6">⑦ 真题闯关</a>
     <a data-go="s7">⑧ 收束评价</a>
   </div>
 </nav>
 
-<!-- ================= ① 情境导入 ================= -->
+<!-- ① 情境导入 -->
 <section id="s0" class="maxw">
-  <div class="sec-head"><span class="sec-num">01</span><h2>情境导入：一瓶"看不见溴"的海水</h2></div>
-  <p class="sec-lead">任何分离方法都不是凭空发明的——它一定是为了解决一个真实的"分离难题"。</p>
+  <div class="sec-head"><span class="sec-num">01</span><h2>情境导入：古人怎样"提纯烧酒"</h2></div>
+  <p class="sec-lead">蒸馏不是凭空发明的操作，它自古服务于一个真实难题——把"混在一起的液体"按挥发性分开。</p>
 
   <div class="card fade-in">
-    <h3>🌊 真实情境 A：福建沿海的"海水提溴"工业</h3>
-    <p>福建海岸线长度居全国第二，溴素是海洋化工的重要产品。但<b>海水中溴的浓度仅约 0.067 g/L</b>——相当于一整瓶矿泉水里只溶有不到 0.01 g 溴。</p>
-    <div class="qbox">
-      <b>驱动性问题：</b>若要把 1 吨海水中的溴提取出来，直接加热蒸干再收集溴，划算吗？工业上如何从<b>"低浓度、大体积"</b>的水体系中把目标物质高效地"抓出来"？
-    </div>
-    <p>工业的真实做法：先<b>浓缩</b>（晒盐后的母液），酸化氧化后<b>热空气吹出</b>富集；而在实验室里，对应"从稀水溶液中富集溶质"的操作，就是——<b style="color:var(--purple)">萃取</b>。</p>
-    <p class="hint">科技史佐证：屠呦呦团队正是用乙醚萃取，从青蒿中提取出青蒿素，获 2015 年诺贝尔生理学或医学奖。</p>
+    <h3>📜 真实情境 A：《本草纲目》中的"蒸烧"</h3>
+    <p>明代《本草纲目》记载："凡酸坏之酒，皆可蒸烧""以烧酒复烧二次，价值数倍也"。古人利用乙醇（沸点 78℃）与水（沸点 100℃）的<b>沸点差异</b>，把易挥发的酒精汽化再冷凝，得到浓度更高的烧酒。</p>
+    <div class="qbox"><b>驱动性问题：</b>为什么"蒸烧"能把酒精从酒中富集出来？为什么不能直接喝掉一锅水、只留下酒精？——这正是蒸馏的全部原理。</div>
   </div>
 
   <div class="card fade-in">
-    <h3>🏭 真实情境 B：2025·福建卷 T12 —— 含苯酚工业废水的处理</h3>
-    <p>苯酚是化工废水中的典型污染物（具有腐蚀性与毒性）。2025 年福建卷直接以该工业流程命题：废水先在设备Ⅰ中经<b>苯萃取、分液</b>回收苯酚，再进入后续处理。</p>
-    <div class="qbox"><b>问题：</b>为什么加苯就能把水里的苯酚"请出去"？这背后藏着萃取的全部原理与规范。让我们带着这个问题，开始今天的复习。</div>
+    <h3>🌊 真实情境 B：海水淡化与石油分馏</h3>
+    <p>福建沿海水资源紧张，<b>蒸馏法淡化海水</b>是经典方案（人教版必修二"海水资源的综合利用"）；而石油分馏更是把几十种烃按沸点"切割"成汽油、煤油、柴油——蒸馏在工业上同样靠"沸点差异"吃饭。</p>
+    <p class="hint">系列衔接：本专题与"为分离而萃取"是同一套"性质差异→方法选择"逻辑——萃取利用溶解度差异，蒸馏利用沸点/挥发性差异。</p>
   </div>
 </section>
 
-<!-- ================= ② 本源问题链 ================= -->
+<!-- ② 本源问题链 -->
 <section id="s1" class="maxw">
-  <div class="sec-head"><span class="sec-num">02</span><h2>本源问题链：五个"母问题"</h2></div>
-  <p class="sec-lead">高考每一道萃取真题，都是下面某个"母问题"的情境化包装。点击问题卡片，先自己作答，再看答案。</p>
+  <div class="sec-head"><span class="sec-num">02</span><h2>本源问题链：六个"母问题"</h2></div>
+  <p class="sec-lead">高考每一道蒸馏真题，都是下面某个"母问题"的情境包装。点击问题卡片，先自己作答，再看答案。</p>
 
   <div class="tree" id="qlist">
-    <div class="tnode">
-      <div class="hd">Q1 分离的本质是什么？<span class="arrow">▾</span></div>
-      <div class="detail">
-        <b>一切分离都是利用组分间的"性质差异"：</b>沸点差 → 蒸馏；固液溶解度差 → 过滤/结晶；同一溶质在两种溶剂中的溶解度差 → <b style="color:var(--purple)">萃取</b>；互不相溶 → 分液。没有性质差异，就没有分离。
-      </div>
-    </div>
-    <div class="tnode">
-      <div class="hd">Q2 萃取"凭什么"把溶质抓走？（本源）<span class="arrow">▾</span></div>
-      <div class="detail">
-        <b>微观视角：</b>溶质分子与两种溶剂分子间的作用强弱不同（相似相溶：I<sub>2</sub>、Br<sub>2</sub>等非极性分子更"亲"CCl<sub>4</sub>、苯等非极性溶剂）。<br>
-        <b>宏观表现：</b>振荡静置后，溶质在两相间达到<b>分配平衡</b>，大部分"搬家"到更亲它的溶剂中——水层颜色变浅，有机层颜色变深。<b>萃取是物理过程，溶质本身不变。</b>
-      </div>
-    </div>
-    <div class="tnode">
-      <div class="hd">Q3 什么样的溶剂才配当萃取剂？<span class="arrow">▾</span></div>
-      <div class="detail">
-        <b>三条件：</b>① 与原溶剂<b>互不相溶</b>；② 与被萃取物<b>不发生反应</b>；③ 溶质在其中溶解度<b>远大于</b>在原溶剂中。<br>
-        高考再包装：<b>密度</b>决定有机层在上还是在下；毒性、挥发性、沸点决定工业取舍（CCl<sub>4</sub>有毒、苯有毒，甲基叔丁基醚更绿色——2023 福建卷即选它做萃取剂）。
-      </div>
-    </div>
-    <div class="tnode">
-      <div class="hd">Q4 操作上每一步"为什么"？<span class="arrow">▾</span></div>
-      <div class="detail">
-        <b>检漏</b>（防液体损失）→ <b>加液</b>（不超过容积 2/3）→ <b>振荡</b>（增大两相接触面，促进分配）→ <b>放气</b>（易挥发组分气化使内压增大，不开活塞会喷液；放气时下口朝上）→ <b>静置分层</b> → <b>分液</b>（打开上口塞子，下层液体从下口放出，上层液体从上口倒出——防止交叉污染）。<br>
-        <b>规范不是背出来的，是理由推出来的。</b>
-      </div>
-    </div>
-    <div class="tnode">
-      <div class="hd">Q5 萃取完了就结束了吗？<span class="arrow">▾</span></div>
-      <div class="detail">
-        <b>不是。</b>萃取只是"搬家 + 富集"，得到的是<b>溶质+萃取剂</b>的混合溶液，还需<b>蒸馏</b>（如碘的CCl<sub>4</sub>溶液蒸馏回收碘）、或干燥后进一步处理。<br>
-        2023 福建卷：萃取分液 → 有机层<b>蒸馏</b>得苯甲醇；水层<b>盐酸酸化</b> → 结晶得苯甲酸。分离方法需要<b>"组队作战"</b>。
-      </div>
-    </div>
+    <div class="tnode"><div class="hd">Q1 蒸馏为什么能分离液体混合物？<span class="arrow">▾</span></div>
+      <div class="detail">本质：混合物各组分<b>沸点（挥发性）不同</b>。加热时低沸点组分优先汽化，蒸气冷凝后即在液相中富集。<br>概括：<b>差异（沸点）→ 相变（汽化·冷凝）→ 富集（分段收集）</b>。</div></div>
+    <div class="tnode"><div class="hd">Q2 温度计为什么要放在支管口，而不是液面或瓶底？<span class="arrow">▾</span></div>
+      <div class="detail">温度计测的是<b>即将进入冷凝管的蒸气温度</b>（即馏分沸点）。若浸入液面或瓶底，读数偏低/偏高，收集的馏分纯度下降。<b>这一步决定了"收的是不是对的馏分"</b>。</div></div>
+    <div class="tnode"><div class="hd">Q3 冷凝管为什么"下进上出"？高沸点为何改用空气冷凝？<span class="arrow">▾</span></div>
+      <div class="detail">下进上出形成<b>逆流</b>，冷凝水充满内管、换热充分；同时避免蒸气骤冷使玻璃炸裂。<b>高沸点（如苯乙烯 145℃）</b>与冷水温差过大，直形冷凝管易炸裂，改用<b>空气冷凝管</b>。</div></div>
+    <div class="tnode"><div class="hd">Q4 沸石/碎瓷片起什么作用？忘了加怎么办？<span class="arrow">▾</span></div>
+      <div class="detail">沸石提供<b>汽化中心</b>，防止液体暴沸。若加热后才发现未加，必须<b>先停止加热、冷却后再补加</b>——向热液中投入沸石会瞬间暴沸喷溅！</div></div>
+    <div class="tnode"><div class="hd">Q5 普通蒸馏、分馏、减压蒸馏、水蒸气蒸馏有何区别？<span class="arrow">▾</span></div>
+      <div class="detail"><b>分馏</b>=连续多级蒸馏（石油）；<b>水蒸气蒸馏</b>用于高沸点/与水不混溶/易分解（花椒油）；<b>减压蒸馏</b>降低沸点，用于高沸点或热敏物质（1,3‑环己二酮）。本质都是"沸点差异"，只是策略不同。</div></div>
+    <div class="tnode"><div class="hd">Q6 拿到混合物，怎么决策"该不该蒸馏、怎么用"？<span class="arrow">▾</span></div>
+      <div class="detail">建立"性质→方法"决策树（见⑥）：互不相溶→分液；互溶且沸点差大→蒸馏；高沸点/热敏→减压；与水不混溶易分解→水蒸气蒸馏。<b>蒸馏常与萃取、分液、干燥"组队"完成提纯。</b></div></div>
   </div>
 </section>
 
-<!-- ================= ③ 原理实验室 ================= -->
+<!-- ③ 原理实验室 -->
 <section id="s2" class="maxw">
-  <div class="sec-head"><span class="sec-num">03</span><h2>原理实验室：碘的"搬家"全过程</h2></div>
-  <p class="sec-lead">按正确顺序点击按钮，完成一次完整的萃取分液模拟。每一步都请先预测现象，再点击验证。</p>
+  <div class="sec-head"><span class="sec-num">03</span><h2>原理实验室：一次蒸馏的完整过程</h2></div>
+  <p class="sec-lead">按正确顺序点击按钮，完成从"加热"到"收集"的蒸馏模拟。每一步都先预测现象，再点击验证。</p>
 
   <div class="card">
     <div class="lab">
       <div class="lab-stage">
-        <svg id="funnelSvg" viewBox="0 0 260 340" width="100%" style="max-width:300px">
+        <svg id="distSvg" viewBox="0 0 300 380" width="100%" style="max-width:300px">
           <!-- stand -->
-          <rect x="30" y="310" width="200" height="6" rx="3" fill="#94a3b8"/>
-          <rect x="50" y="316" width="10" height="20" fill="#94a3b8"/>
-          <rect x="200" y="316" width="10" height="20" fill="#94a3b8"/>
-          <rect x="44" y="286" width="14" height="6" rx="2" fill="#64748b"/>
-          <rect x="202" y="286" width="14" height="6" rx="2" fill="#64748b"/>
-          <!-- beaker -->
-          <path d="M78 300 L78 262 L182 262 L182 300" fill="none" stroke="#94a3b8" stroke-width="3"/>
-          <rect id="beakLiquid" x="80" y="272" width="100" height="26" fill="#dbeafe" opacity="0"/>
-          <!-- funnel body: cone -->
-          <path id="funGlass" d="M75 40 L185 40 L138 200 L138 250 L122 250 L122 200 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
-          <!-- stopper -->
-          <rect x="118" y="18" width="24" height="24" rx="5" fill="#94a3b8"/>
-          <!-- liquids (clip inside cone) -->
-          <clipPath id="coneClip"><path d="M77 42 L183 42 L137 198 L137 248 L123 248 L123 198 Z"/></clipPath>
-          <g clip-path="url(#coneClip)">
-            <rect id="liqWater" x="70" y="120" width="120" height="140" fill="#fef3c7"/>
-            <rect id="liqCc4" x="70" y="230" width="120" height="40" fill="#e0f2fe"/>
-            <rect id="liqMix" x="70" y="90" width="120" height="180" fill="url(#mixGrad)" opacity="0"/>
-            <rect id="liqNewWater" x="70" y="105" width="120" height="130" fill="#fef9e7" opacity="0"/>
-            <rect id="liqNewCc4" x="70" y="230" width="120" height="40" fill="#7c3aed" opacity="0"/>
+          <rect x="40" y="350" width="200" height="6" rx="3" fill="#94a3b8"/>
+          <rect x="58" y="356" width="9" height="18" fill="#94a3b8"/>
+          <rect x="206" y="356" width="9" height="18" fill="#94a3b8"/>
+          <rect x="52" y="326" width="13" height="6" rx="2" fill="#64748b"/>
+          <rect x="200" y="326" width="13" height="6" rx="2" fill="#64748b"/>
+          <!-- 锥形瓶 -->
+          <path d="M232 320 L232 338 L276 372 L188 372 L232 338 Z" fill="#eaf3ff" stroke="#94a3b8" stroke-width="3"/>
+          <rect id="recvLiq" x="232" y="338" width="0" height="34" fill="#7c3aed" opacity="1"/>
+          <text x="232" y="392" text-anchor="middle" font-size="11" fill="#1e3a8a">接收瓶</text>
+          <!-- 牛角管 -->
+          <path d="M196 200 L232 200 L232 326" fill="none" stroke="#94a3b8" stroke-width="10" stroke-linejoin="round"/>
+          <!-- 冷凝管 -->
+          <rect x="120" y="168" width="80" height="64" rx="12" fill="#dff0ff" stroke="#94a3b8" stroke-width="3"/>
+          <rect x="120" y="184" width="80" height="32" rx="6" fill="#bfe2ff"/>
+          <text x="160" y="206" text-anchor="middle" font-size="12" fill="#1e3a8a">冷凝管</text>
+          <circle cx="124" cy="228" r="6" fill="#16a34a"/><text x="112" y="246" font-size="10" fill="#16a34a">进</text>
+          <circle cx="196" cy="172" r="6" fill="#dc2626"/><text x="196" y="164" text-anchor="middle" font-size="10" fill="#dc2626">出</text>
+          <!-- 支管 -->
+          <path d="M160 200 L120 200" stroke="#94a3b8" stroke-width="10" fill="none"/>
+          <!-- 蒸馏烧瓶 -->
+          <path d="M118 326 L118 250 L142 210 L178 210 L202 250 L202 326 Z" fill="#eaf3ff" stroke="#94a3b8" stroke-width="3"/>
+          <path id="flaskLiq" d="M122 326 L122 270 L142 234 L178 234 L198 270 L198 326 Z" fill="#d4e6ff"/>
+          <ellipse cx="160" cy="318" rx="40" ry="10" fill="#bcdcff"/>
+          <!-- 沸石 -->
+          <g id="boilStone"><circle cx="150" cy="312" r="3" fill="#94a3b8"/><circle cx="168" cy="316" r="3" fill="#94a3b8"/><circle cx="160" cy="320" r="3" fill="#94a3b8"/></g>
+          <!-- 温度计 -->
+          <rect x="147" y="120" width="7" height="115" rx="3" fill="#fff" stroke="#333"/>
+          <rect id="mercury" x="149" y="200" width="3" height="35" fill="#dc2626"/>
+          <circle cx="150" cy="200" r="9" fill="#dc2626" stroke="#333"/>
+          <text x="134" y="150" font-size="12" fill="#dc2626">温度计</text>
+          <!-- 酒精灯 -->
+          <g id="lamp"><rect x="138" y="338" width="44" height="22" rx="5" fill="#dc2626"/><rect x="146" y="328" width="28" height="12" rx="4" fill="#e07b6a"/></g>
+          <path id="flame" d="M150 326 Q160 306 170 326 Z" fill="#f59e0b" opacity="0"/>
+          <!-- 蒸气动画 -->
+          <g id="vapor" opacity="0">
+            <circle cx="160" cy="210" r="3" fill="#cbd5e1"><animate attributeName="cy" values="210;160;200" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="1.2s" repeatCount="indefinite"/></circle>
+            <circle cx="160" cy="180" r="3" fill="#cbd5e1"><animate attributeName="cy" values="180;140;175" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="1.2s" repeatCount="indefinite"/></circle>
+            <circle cx="150" cy="200" r="3" fill="#cbd5e1"><animate attributeName="cy" values="200;150;190" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9; 0" dur="1.2s" repeatCount="indefinite"/></circle>
           </g>
-          <defs>
-            <linearGradient id="mixGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#fef3c7"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#a78bfa"/>
-            </linearGradient>
-          </defs>
-          <!-- stopcock -->
-          <rect x="112" y="248" width="36" height="12" rx="3" fill="#64748b"/>
-          <rect x="146" y="249" width="26" height="10" rx="4" fill="#dc2626"/>
-          <!-- tip -->
-          <path d="M124 260 L136 260 L130 285 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
-          <path id="drip" d="M128 285 L132 285 L131 296 L129 296 Z" fill="#7c3aed" opacity="0"/>
-          <!-- labels -->
-          <text x="196" y="118" font-size="12" fill="#b45309">碘水(浅黄)</text>
-          <text x="196" y="245" font-size="12" fill="#0369a1">CCl<tspan baseline-shift="sub" font-size="9">4</tspan></text>
-          <text x="196" y="170" font-size="12" fill="#7c3aed" id="layerLabel" opacity="0">紫红色↓</text>
+          <g id="condDrop" opacity="0">
+            <circle cx="160" cy="200" r="3" fill="#3b82f6"><animate attributeName="cy" values="195;226" dur="1s" repeatCount="indefinite"/></circle>
+            <circle cx="160" cy="210" r="3" fill="#3b82f6"><animate attributeName="cy" values="205;228" dur="1s" begin=".5s" repeatCount="indefinite"/></circle>
+          </g>
+          <text id="label78" x="232" y="330" text-anchor="middle" font-size="11" fill="#7c3aed" opacity="0">馏分 ≈78℃</text>
         </svg>
         <div class="steps-rail" id="rail">
-          <span class="pill cur" data-p="0">加萃取剂</span>
-          <span class="pill" data-p="1">振荡</span>
-          <span class="pill" data-p="2">放气</span>
-          <span class="pill" data-p="3">静置分层</span>
-          <span class="pill" data-p="4">分液</span>
+          <span class="pill cur" data-p="0">加液·沸石</span>
+          <span class="pill" data-p="1">加热</span>
+          <span class="pill" data-p="2">汽化</span>
+          <span class="pill" data-p="3">冷凝</span>
+          <span class="pill" data-p="4">收集</span>
         </div>
       </div>
       <div class="lab-panel">
         <div id="labBtns">
-          <button class="btn" data-act="add">① 加入 CCl<sub>4</sub></button>
-          <button class="btn" data-act="shake" disabled>② 倒转振荡</button>
-          <button class="btn" data-act="vent" disabled>③ 开活塞放气</button>
-          <button class="btn" data-act="settle" disabled>④ 静置分层</button>
-          <button class="btn" data-act="separate" disabled>⑤ 分液</button>
+          <button class="btn" data-act="add">① 加液 + 沸石</button>
+          <button class="btn" data-act="heat" disabled>② 点燃加热</button>
+          <button class="btn" data-act="vapor" disabled>③ 汽化上升</button>
+          <button class="btn" data-act="condense" disabled>④ 冷凝成液</button>
+          <button class="btn" data-act="collect" disabled>⑤ 收集馏分</button>
           <button class="btn ghost" data-act="reset">↺ 重新开始</button>
         </div>
         <div class="status" id="labStatus">
-          <b>当前：</b>分液漏斗中盛有稀碘水（浅黄色）。碘在水中溶解度很小。<br>
-          <div class="micro">微观：水是极性溶剂，I<sub>2</sub>是非极性分子，"不太亲"，故溶解度小、浓度低。</div>
+          <b>当前：</b>蒸馏烧瓶中加入乙醇–水混合液（体积≤1/2），并放入沸石（提供汽化中心）。<br>
+          <div class="micro">微观：沸石表面微孔成为气泡"出生点"，防止液体过热暴沸。</div>
         </div>
-        <div class="qbox" style="margin-top:14px">
-          <b>预测一下：</b>加入 CCl<sub>4</sub> 振荡静置后，哪一层会变成紫红色？水层颜色将如何变化？
-        </div>
+        <div class="qbox" style="margin-top:14px"><b>预测一下：</b>加热到 78℃ 附近时，哪一种组分（乙醇 or 水）会先进入冷凝管？温度计读数应该大致落在什么范围？</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= ④ 萃取剂选择 ================= -->
+<!-- ④ 装置与变式 -->
 <section id="s3" class="maxw">
-  <div class="sec-head"><span class="sec-num">04</span><h2>萃取剂选择：三条件火眼金睛</h2></div>
-  <p class="sec-lead">判断下列试剂能否用作"从水溶液中萃取溴/碘"的萃取剂。点击卡片揭晓判断，并注意每条理由对应三条件中的哪一条。</p>
+  <div class="sec-head"><span class="sec-num">04</span><h2>装置部件与蒸馏变式</h2></div>
+  <p class="sec-lead">点击左侧装置部件查看作用；下方四张卡片对比四种"蒸馏"的适用场景，点击揭晓。</p>
 
   <div class="card">
-    <h3>🧪 试剂判断（共 6 张，判断对 1 张得 1 分）</h3>
-    <div class="ex-grid" id="exGrid">
-      <div class="ex-card" data-ok="yes">
-        <span class="judge">?</span>
-        <div class="t chem">CCl<sub>4</sub></div>
-        <div class="d">四氯化碳，非极性溶剂</div>
-        <div class="d" style="display:none;color:var(--green);margin-top:6px">✓ 可以。与水互不相溶、不与Br<sub>2</sub>/I<sub>2</sub>反应、溶解度差异大。密度比水大→有机层在<b>下层</b>。</div>
-      </div>
-      <div class="ex-card" data-ok="no">
-        <span class="judge">?</span>
-        <div class="t">酒精（乙醇）</div>
-        <div class="d">常用有机溶剂</div>
-        <div class="d" style="display:none;color:var(--red);margin-top:6px">✗ 不行。酒精与水<b>互溶</b>，无法分层——违背条件①。（这正是高一最经典陷阱）</div>
-      </div>
-      <div class="ex-card" data-ok="yes">
-        <span class="judge">?</span>
-        <div class="t">苯</div>
-        <div class="d">非极性溶剂，密度 0.88 g/cm³</div>
-        <div class="d" style="display:none;color:var(--green);margin-top:6px">✓ 可以。但有毒（工业上正被更绿色的萃取剂替代）。密度比水小→有机层在<b>上层，从上口倒出</b>。2025福建卷即以苯萃取苯酚。</div>
-      </div>
-      <div class="ex-card" data-ok="no">
-        <span class="judge">?</span>
-        <div class="t">热的 NaOH 溶液</div>
-        <div class="d">碱性溶液</div>
-        <div class="d" style="display:none;color:var(--red);margin-top:6px">✗ 不行。NaOH 与 Br<sub>2</sub>、I<sub>2</sub>、苯酚等<b>发生反应</b>（Br<sub>2</sub>+2NaOH=NaBr+NaBrO+H<sub>2</sub>O）——违背条件②。</div>
-      </div>
-      <div class="ex-card" data-ok="yes">
-        <span class="judge">?</span>
-        <div class="t">甲基叔丁基醚</div>
-        <div class="d">密度 0.74 g/cm³，实验室常用</div>
-        <div class="d" style="display:none;color:var(--green);margin-top:6px">✓ 可以。<b>2023福建卷 T8</b> 正是用它萃取苯甲醇：密度小于水→有机层在上层，<b>从上口倒出</b>。</div>
-      </div>
-      <div class="ex-card" data-ok="no">
-        <span class="judge">?</span>
-        <div class="t">饱和食盐水</div>
-        <div class="d">与水互溶的盐溶液</div>
-        <div class="d" style="display:none;color:var(--red);margin-top:6px">✗ 不行。与原溶剂（水）互溶不分层，且对Br<sub>2</sub>/I<sub>2</sub>溶解度并不远大于水——条件①③均不符。它常用于洗气除HCl，别混淆。</div>
-      </div>
+    <h3>🧪 装置部件（点击查看）</h3>
+    <div class="ex-grid" id="partGrid">
+      <div class="ex-card" data-ok="part"><span class="judge">?</span><div class="t">蒸馏烧瓶</div><div class="d">汽化容器，液体≤1/2</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 盛待蒸馏液，支管引出蒸气；必须垫石棉网/油浴受热均匀，且必加沸石。</div></div>
+      <div class="ex-card" data-ok="part"><span class="judge">?</span><div class="t">温度计</div><div class="d">测蒸气温度＝馏分沸点</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 水银球位于<b>支管口处</b>；位置错→读数偏差→馏分不纯。</div></div>
+      <div class="ex-card" data-ok="part"><span class="judge">?</span><div class="t">冷凝管</div><div class="d">使蒸气液化</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 冷却水<b>下进上出</b>（逆流）；高沸点蒸气改用空气冷凝管。</div></div>
+      <div class="ex-card" data-ok="part"><span class="judge">?</span><div class="t">牛角管</div><div class="d">引流馏出液</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 把冷凝后的液体导入接收瓶，避免蒸气外逸。</div></div>
     </div>
-    <p class="hint">已完成 <span id="exDone">0</span>/6 · 全部判断后思考：若让你为工业流程选择萃取剂，除三条件外还要考虑什么？（毒性、成本、沸点差是否便于蒸馏回收、是否易乳化）</p>
+    <p class="hint">完成 0/4 部件；可与③的动画对照记忆"蒸气从烧瓶→支管→冷凝管→牛角管→接收瓶"的流向。</p>
   </div>
 
   <div class="card">
-    <h3>⚖️ 分层速判：有机层在哪一层？</h3>
-    <p>口诀：<b>"下看密度，上看颜色"</b>——密度的相对大小决定位置；有机溶有 Br<sub>2</sub>/I<sub>2</sub> 时颜色深（橙红/紫红），是显眼标志。</p>
-    <table class="kt">
-      <tr><th>萃取剂</th><th>密度 vs 水</th><th>有机层位置</th><th>放出方式</th></tr>
-      <tr><td class="chem">CCl<sub>4</sub></td><td>1.59 g/cm³ ＞ 水</td><td>下层（深色）</td><td>打开上口塞子，<b>下口</b>放出</td></tr>
-      <tr><td class="chem">苯 / 汽油 / 甲基叔丁基醚</td><td>＜ 水</td><td>上层（深色）</td><td><b>上口</b>倒出</td></tr>
-      <tr class="hl"><td colspan="4" style="color:var(--purple)"><b>真题考法（2023福建T8）：</b>题干给密度数据（如 0.74 g/cm³）→ 判断有机层在上 → 选"从上口倒出"。不看密度凭感觉，必错。</td></tr>
-    </table>
+    <h3>🔀 四种"蒸馏"变式对照（点击卡片）</h3>
+    <div class="ex-grid" id="varGrid">
+      <div class="ex-card" data-ok="yes"><span class="judge">?</span><div class="t">普通蒸馏</div><div class="d">互溶、沸点差大、热稳定</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 如乙酸乙酯提纯（收 73–78℃ 馏分）；温度计、冷凝水、沸石三件套齐备。</div></div>
+      <div class="ex-card" data-ok="yes"><span class="judge">?</span><div class="t">水蒸气蒸馏</div><div class="d">高沸点/与水不混溶/易分解</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 2022 真题：花椒油提取，蒸气把油状成分"带出"，食盐盐析促分层。</div></div>
+      <div class="ex-card" data-ok="yes"><span class="judge">?</span><div class="t">减压蒸馏</div><div class="d">高沸点或热敏物质</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 2024·福建 T8：1,3‑环己二酮除 DMF，降压降低沸点、防分解。</div></div>
+      <div class="ex-card" data-ok="yes"><span class="judge">?</span><div class="t">分馏（精馏）</div><div class="d">多组分、沸点接近</div><div class="d" style="display:none;color:var(--green);margin-top:6px">✔ 石油分馏；2024·福建 TiCl₄ 精制含 SiCl₄ 即用分馏/精馏。</div></div>
+    </div>
+    <p class="hint">四者本质都是"沸点差异"，区别只在<b>操作条件与适用体系</b>。减压蒸馏的核心逻辑：压强↓→沸点↓→避免热敏物分解。</p>
   </div>
 </section>
 
-<!-- ================= ⑤ 操作解码 ================= -->
+<!-- ⑤ 操作解码 -->
 <section id="s4" class="maxw">
-  <div class="sec-head"><span class="sec-num">05</span><h2>操作解码：五步排序 + 纠错训练</h2></div>
-  <p class="sec-lead">先拖动（或用 ↑↓ 按钮）将操作步骤排成正确顺序，再做判断纠错。这两类题型是福建卷实验填空的常客。</p>
+  <div class="sec-head"><span class="sec-num">05</span><h2>操作解码：步骤排序 + 纠错</h2></div>
+  <p class="sec-lead">先拖动（或 ↑↓）排出蒸馏操作顺序，再判断纠错。这两类是福建卷实验填空的常客。</p>
 
   <div class="card">
-    <h3>📋 任务一：给萃取操作排顺序</h3>
+    <h3>📋 任务一：给蒸馏操作排顺序</h3>
     <ul class="sort-list" id="sortList"></ul>
     <button class="btn teal" id="sortCheck">提交检查</button>
     <button class="btn ghost" id="sortShuffle">↺ 打乱重排</button>
@@ -426,38 +307,20 @@
   </div>
 </section>
 
-<!-- ================= ⑥ 知识结构树 ================= -->
+<!-- ⑥ 知识树 -->
 <section id="s5" class="maxw">
-  <div class="sec-head"><span class="sec-num">06</span><h2>知识结构树：把萃取放回"分离方法体系"</h2></div>
-  <p class="sec-lead">单击节点展开细节。紫红色高亮路径是本专题位置——注意"萃取必须以分液收尾、常以蒸馏终结"的组合链。</p>
+  <div class="sec-head"><span class="sec-num">06</span><h2>知识结构树：把蒸馏放回"分离方法体系"</h2></div>
+  <p class="sec-lead">单击节点展开细节。紫色高亮路径是本专题位置——注意"萃取/分液 ↔ 蒸馏"的方法组合链。</p>
 
   <div class="card">
     <div class="tree">
       <div class="tnode open">
         <div class="hd">混 合 物 分 离 —— 本质：利用组分<b>性质差异</b> <span class="arrow">▴</span></div>
         <div class="detail">
-          <div class="tnode">
-            <div class="hd">├ 状态差异 <span class="arrow">▾</span></div>
-            <div class="detail">过滤（固/液分离：一贴二低三靠）、分液（互不相溶的液/液）</div>
-          </div>
-          <div class="tnode">
-            <div class="hd">├ 溶解度差异 <span class="arrow">▾</span></div>
-            <div class="detail">
-              结晶（冷却热饱和溶液/蒸发，固+液）、<b style="color:var(--purple)">★萃取（溶质在两种互不相溶溶剂间的分配）</b><br>
-              <span style="color:var(--purple)">组合链：萃取 → 分液（先"搬家"后"分家"）→ 蒸馏（回收溶质与萃取剂）</span>
-            </div>
-          </div>
-          <div class="tnode">
-            <div class="hd">├ 沸点/挥发性差异 <span class="arrow">▾</span></div>
-            <div class="detail">蒸馏（沸点差较大）、分馏（石油分馏等多组分）——注意温度计水银球位置在支管口</div>
-          </div>
-          <div class="tnode">
-            <div class="hd">└ 高考流程题的"分离方法组合拳" <span class="arrow">▾</span></div>
-            <div class="detail">
-              典型序列：溶解→(过滤除不溶物)→<b>萃取分液</b>→(干燥剂干燥)→<b>蒸馏</b>→(结晶/重结晶)<br>
-              2023福建T8：混合液 →<b>甲基叔丁基醚萃取+分液</b>→ 有机层(苯甲醇)→<b>蒸馏</b>／水层(苯甲酸钾)→<b>盐酸酸化</b>→结晶→水洗→干燥
-            </div>
-          </div>
+          <div class="tnode"><div class="hd">├ 状态差异 <span class="arrow">▾</span></div><div class="detail">过滤（固/液）、分液（互不相溶的液/液）</div></div>
+          <div class="tnode"><div class="hd">├ 溶解度差异 <span class="arrow">▾</span></div><div class="detail">结晶（固+液）、<b style="color:var(--purple)">萃取</b>（溶质在两溶剂间分配）<br><span style="color:var(--purple)">组合链：萃取→分液→蒸馏</span></div></div>
+          <div class="tnode hot"><div class="hd">├ 沸点/挥发性差异（本专题） <span class="arrow">▾</span></div><div class="detail"><b style="color:var(--purple)">蒸馏</b>：温度计在支管口、冷凝水下进上出、沸石防暴沸、先停火后停水。<br>变式：分馏（多组分）、减压蒸馏（热敏）、水蒸气蒸馏（高沸点/与水不混溶）。</div></div>
+          <div class="tnode"><div class="hd">└ 高考流程题的"分离组合拳" <span class="arrow">▾</span></div><div class="detail">典型序列：溶解→(过滤)→<b>蒸馏/萃取分液</b>→(干燥)→<b>蒸馏</b>→(结晶)<br>2023福建T8：混合液→醚萃取+分液→有机层(苯甲醇)<b>蒸馏</b>／水层(苯甲酸钾)→盐酸酸化→结晶。</div></div>
         </div>
       </div>
     </div>
@@ -467,75 +330,77 @@
     <h3>🗂 核心知识卡（对照自检）</h3>
     <table class="kt">
       <tr><th style="width:18%">项目</th><th>要点</th><th style="width:30%">高考考法</th></tr>
-      <tr><td><b>原理</b></td><td>溶质在互不相溶的两溶剂中<b>溶解度不同</b>（物理过程）</td><td>简答"为什么能分离"</td></tr>
-      <tr><td><b>萃取剂三条件</b></td><td>互不相溶；不反应；溶解度差异大</td><td>选择/评价萃取剂</td></tr>
-      <tr><td><b>常见萃取剂</b></td><td class="chem">CCl<sub>4</sub>(下层)；苯、汽油、甲基叔丁基醚(上层)</td><td>由密度判断上下层与放出口</td></tr>
-      <tr><td><b>操作五步</b></td><td>检漏→加液(≤2/3容积)→振荡放气→静置→分液</td><td>填空补全、排序</td></tr>
-      <tr><td><b>细节给分点</b></td><td>放气下口朝上；分液前打开上口塞子；下层下口放、上层上口倒；尖嘴紧贴接受器内壁</td><td>填空细节（2025福建T12直接考）</td></tr>
-      <tr><td><b>后续处理</b></td><td>有机层加干燥剂(无水Na<sub>2</sub>SO<sub>4</sub>/MgSO<sub>4</sub>)→蒸馏</td><td>流程题衔接</td></tr>
+      <tr><td><b>原理</b></td><td>互溶组分<b>沸点（挥发性）差异</b>，汽化—冷凝分离</td><td>简答"为什么能分离"</td></tr>
+      <tr><td><b>温度计</b></td><td>水银球位于<b>支管口</b>，测蒸气温度（馏分沸点）</td><td>填空/纠错（位置陷阱）</td></tr>
+      <tr><td><b>冷凝管</b></td><td>冷却水<b>下进上出</b>；高沸点蒸气用空气冷凝管</td><td>填空（逆流换热）</td></tr>
+      <tr><td><b>沸石</b></td><td>提供汽化中心，<b>防暴沸</b>；热后补加需先冷却</td><td>实验安全填空</td></tr>
+      <tr><td><b>收集</b></td><td>弃前馏分，按沸点区间收集中间馏分；不可蒸干</td><td>流程题衔接</td></tr>
+      <tr><td><b>变式</b></td><td>分馏 / 减压蒸馏 / 水蒸气蒸馏</td><td>2024福建T8（减压）、2022（水蒸气）</td></tr>
     </table>
   </div>
 </section>
 
-<!-- ================= ⑦ 真题闯关 ================= -->
+<!-- ⑦ 真题闯关 -->
 <section id="s6" class="maxw">
-  <div class="sec-head"><span class="sec-num">07</span><h2>真题闯关：福建卷上的萃取</h2></div>
-  <p class="sec-lead">两关均改编自福建卷原题（细节建议课前核对原卷）。每题作答后即时出解析——先自己想，再看答案。</p>
+  <div class="sec-head"><span class="sec-num">07</span><h2>真题闯关：福建卷上的蒸馏</h2></div>
+  <p class="sec-lead">三关改编自福建卷/高考实验真题（细节建议课前核对原卷）。每题作答后即时出解析——先自己想，再看答案。</p>
 
-  <!-- 关卡1 -->
   <div class="card">
-    <h3>🥇 第一关（2025·福建卷·T12 节选）含苯酚废水的萃取处理</h3>
-    <p style="font-size:14.5px">处理含苯酚的工业废水：设备Ⅰ中进行<b>萃取、分液</b>操作，实验室里这一步要用到分液漏斗和烧杯。完成下列填空：</p>
-    <div style="margin:10px 0;line-height:2.4">
-      ① 分液漏斗使用前应先
-      <select class="fillselect" data-ans="检查是否漏水（检漏）"><option value="">——选择——</option><option>用蒸馏水洗净</option><option>检查是否漏水（检漏）</option><option>放入烘箱干燥</option></select>；<br>
-      ② 实验室进行萃取操作时，需要不时打开分液漏斗活塞
-      <select class="fillselect" data-ans="放气"><option value="">——选择——</option><option>放气</option><option>放出下层液体</option><option>搅拌</option></select>；<br>
-      ③ 分液时，分液漏斗最末端的尖嘴处应紧贴
-      <select class="fillselect" data-ans="烧杯内壁"><option value="">——选择——</option><option>烧杯内壁</option><option>桌面</option><option>漏斗颈部</option></select>；<br>
-      ④ 设备Ⅰ中，苯的作用为
-      <select class="fillselect" data-ans="萃取剂（萃取苯酚）"><option value="">——选择——</option><option>萃取剂（萃取苯酚）</option><option>氧化剂</option><option>催化剂</option></select>。
-    </div>
-    <button class="btn" onclick="checkFill(this)">提交答案</button>
-    <div class="explain" id="ex1">
-      <b>解析：</b>① 萃取分液前必检漏，防止操作中漏液损失；② 振荡时苯（易挥发）气化+萃取放热使漏斗内压增大，需不时倒转使下口朝上放气，防止冲开塞子喷液；③ 尖嘴紧贴烧杯内壁，防止液体飞溅；④ 苯与水互不相溶，苯酚在苯中溶解度远大于水中，苯作萃取剂把苯酚从废水中"抓"入有机层。
-    </div>
-  </div>
-
-  <!-- 关卡2 -->
-  <div class="card">
-    <h3>🥈 第二关（2023·福建卷·T8）甲基叔丁基醚萃取分离苯甲醇和苯甲酸</h3>
-    <p style="font-size:14.5px">从苯甲醛和 KOH 溶液反应后的混合液中分离出苯甲醇和苯甲酸的过程如下（流程含：萃取分液→有机层水洗→MgSO<sub>4</sub>干燥→过滤→操作X 得苯甲醇；水层→加试剂Y→结晶→过滤→洗涤→干燥得苯甲酸）。已知甲基叔丁基醚的密度为 0.74 g/cm³。下列说法<b>错误</b>的是：</p>
+    <h3>🥇 第一关（2023·福建·T8）苯甲醇与苯甲酸的分离</h3>
+    <p style="font-size:14.5px">从苯甲醛和 KOH 反应后的混合液分离苯甲醇与苯甲酸，流程含萃取分液→有机层水洗→干燥→过滤→操作X 得苯甲醇；水层→加试剂Y→结晶得苯甲酸。已知甲基叔丁基醚密度 0.74 g/cm³。下列说法<b>错误</b>的是：</p>
     <div id="q2opts">
       <button class="opt">A. "萃取"过程需振荡、放气、静置分层</button>
       <button class="opt">B. "有机层"从分液漏斗上口倒出</button>
       <button class="opt">C. "操作X"为蒸馏，"试剂Y"可选用盐酸</button>
       <button class="opt">D. "洗涤"苯甲酸，用乙醇的效果比用蒸馏水好</button>
     </div>
-    <div class="explain" id="ex2">
-      <b>答案：D（选错误的，故填 D）</b><br>
+    <div class="explain" id="ex2"><b>答案：D（选错误的）。</b><br>
       A ✓：萃取标准动作"振荡→放气→静置分层"。<br>
-      B ✓：甲基叔丁基醚密度 0.74 g/cm³ < 1 g/cm³，有机层在<b>上层</b>，必须从<b>上口</b>倒出（若从下口放会先放掉下层水层并造成交叉污染）。<br>
-      C ✓：苯甲醇与醚沸点差异大，用<b>蒸馏</b>分离；苯甲酸钾是盐，需加盐酸<b>酸化</b>转化为苯甲酸析出。<br>
-      D ✗：<b>洗涤晶体的目的是洗去杂质并减少产品损失</b>，应选对产品溶解度<b>小</b>的溶剂——苯甲酸在乙醇中溶解度远大于水中，用乙醇洗会大量损失产品，故用<b>蒸馏水</b>洗更好。<br>
-      <b>命题逻辑提炼：</b>密度→上下层判断；沸点差→蒸馏；酸化→结晶；溶解度→洗涤剂选择——每一步都是"性质差异决定操作"。
+      B ✓：醚密度 0.74 &lt; 水，有机层在<b>上层</b>，必须从<b>上口</b>倒出。<br>
+      C ✓：苯甲醇与醚沸点差异大，用<b>蒸馏</b>分离；苯甲酸钾需加盐酸<b>酸化</b>析出。<br>
+      D ✗：洗涤应选对产品溶解度<b>小</b>的溶剂——苯甲酸在乙醇中溶解度远大于水中，用乙醇洗会大量损失，故用<b>蒸馏水</b>更好。</div>
+  </div>
+
+  <div class="card">
+    <h3>🥈 第二关（2024·福建·T8）1,3‑环己二酮的减压蒸馏</h3>
+    <p style="font-size:14.5px">药物中间体 1,3‑环己二酮由 5‑氧代己酸甲酯合成，用<b>减压蒸馏</b>除去 CH₃OH、5‑氧代己酸甲,酯和 DMF。下列说法或操作<b>错误</b>的是：</p>
+    <div id="q3opts">
+      <button class="opt">A. 反应须在通风橱中进行（DMF 有毒）</button>
+      <button class="opt">B. 减压蒸馏可利用沸点差异去除杂质、提纯中间产物</button>
+      <button class="opt">C. 减压蒸馏后趁热加入盐酸</button>
+      <button class="opt">D. 过滤后可用少量冰水洗涤产物</button>
     </div>
+    <div class="explain" id="ex3"><b>答案：C（选错误的）。</b><br>
+      C ✗：盐酸易挥发，<b>减压蒸馏后不能趁热加盐酸</b>，应冷却后加入。其余均正确：B 体现"沸点差异提纯"本质；D 冰水洗去极性杂质且对产物损失小。</div>
+  </div>
+
+  <div class="card">
+    <h3>🥉 第三关（2022 高考实验·水蒸气蒸馏）花椒油提取</h3>
+    <p style="font-size:14.5px">水蒸气蒸馏提取花椒油，向馏出液中加入食盐至饱和的目的是：</p>
+    <div id="q1opts">
+      <button class="opt">A. 使花椒油乳化</button>
+      <button class="opt">B. 降低花椒油在水中的溶解度，利于分层</button>
+      <button class="opt">C. 中和残留碱</button>
+      <button class="opt">D. 催化反应</button>
+    </div>
+    <div class="explain" id="ex1"><b>答案：B。</b>食盐降低有机物在水中的溶解度（盐析），促使油层与水层分层；之后再用乙醚萃取、无水 Na₂SO₄ 干燥、蒸馏得花椒油。本题考查<b>水蒸气蒸馏</b>后续处理。</div>
   </div>
 </section>
 
-<!-- ================= ⑧ 收束评价 ================= -->
+<!-- ⑧ 收束评价 -->
 <section id="s7" class="maxw">
   <div class="sec-head"><span class="sec-num">08</span><h2>收束评价：画出你自己的决策树</h2></div>
-  <p class="sec-lead">合上讲义，在学案上默画"物质分离方法决策树"并标出萃取位置，然后完成自检与迁移思考。</p>
+  <p class="sec-lead">合上讲义，在学案上默画"物质分离方法决策树"并标出蒸馏位置，然后完成自检与迁移思考。</p>
 
-  <div class="card">
+  <div class="card"><div class="card">
     <h3>✅ 本课自检清单（如实勾选）</h3>
     <div id="checkList" style="line-height:2.3;font-size:15px"></div>
     <div class="stat-row">
-      <span class="stat-chip">试剂判断：<b id="st1">0</b>/6</span>
+      <span class="stat-chip">装置部件：<b id="st1">0</b>/4</span>
+      <span class="stat-chip">变式卡片：<b id="st1b">0</b>/4</span>
       <span class="stat-chip">步骤排序：<b id="st2">—</b></span>
       <span class="stat-chip">纠错训练：<b id="st3">0</b>/4</span>
-      <span class="stat-chip">真题两关：<b id="st4">—</b></span>
+      <span class="stat-chip">真题三关：<b id="st4">—</b></span>
       <span class="stat-chip">自检勾选：<b id="st5">0</b>/5</span>
     </div>
     <p class="hint" id="overallMsg" style="font-size:14px"></p>
@@ -543,283 +408,211 @@
 
   <div class="card">
     <h3>🧗 迁移追问（课后思考 · 二轮伏笔）</h3>
-    <div class="qbox">
-      <b>问题：</b>2023 福建卷中，苯甲酸在水层里以<b>苯甲酸钾（盐，带电荷）</b>形式存在，没有直接被萃取进有机层——若目标物质在水层且呈离子态，还能直接萃取吗？该怎么办？<br>
-      <span style="font-size:14px;color:var(--ink-soft)">提示：先<b>酸化</b>把它转化为分子态（如苯甲酸），再进入萃取/结晶路径——"调 pH 实现萃取选择性"正是工业流程题的高频考点。</span>
-    </div>
+    <div class="qbox"><b>问题：</b>2023 福建卷中，苯甲酸在水层以<b>苯甲酸钾（盐，带电荷）</b>形式存在，未被直接萃取——若目标物质在水层且呈离子态，还能直接蒸馏吗？该怎么办？<br>
+      <span style="font-size:14px;color:var(--ink-soft)">提示：先<b>酸化</b>转化为分子态（如苯甲酸），再进入萃取/蒸馏路径——"调 pH 实现选择性"是工业流程题高频考点。</span></div>
     <p style="font-size:14.5px"><b>分层作业：</b><br>
-    基础层：完成操作五步填空与"从溴水中提取溴"的方案设计；<br>
-    提升层：查阅资料，设计"从茶叶中提取咖啡因"的实验方案，说明每一步所用分离方法及选择理由（方法组合：萃取→蒸馏→升华）。</p>
+      基础层：完成装置填空与"从海水中提取淡水"的方案设计；<br>
+      提升层：设计"从白酒中提纯乙醇"实验方案，说明蒸馏温度选择与杂质（水、杂醇油）处理方式。</p>
   </div>
 </section>
 
 <footer>
-  「为分离而萃取」高三物质分离微专题 · 配套互动页面 · 素材来源：人教版必修一 / 2023·福建卷 T8 / 2025·福建卷 T12（题目细节建议课前核对原卷）
+  「为分离而蒸馏」高三物质分离微专题 · 与「为分离而萃取」配套 · 素材：人教版必修一 / 2023·福建 T8 / 2024·福建 T8 / 2022 水蒸气蒸馏真题（细节建议课前核对原卷）
 </footer>
 
-<div id="scorebar" onclick="document.getElementById('s7').scrollIntoView({behavior:'smooth'})">
-  得分 <b id="totalScore">0</b>
-</div>
+<div id="scorebar" onclick="document.getElementById('s7').scrollIntoView({behavior:'smooth'})">得分 <b id="totalScore">0</b></div>
 
 <script>
-/* ============ global score ============ */
-let SCORE = 0;
-function addScore(n){ SCORE += n; document.getElementById('totalScore').textContent = SCORE; }
-function setStat(id, val){ document.getElementById(id).textContent = val; }
+let SCORE=0;
+function addScore(n){SCORE+=n;document.getElementById('totalScore').textContent=SCORE;}
+function setStat(id,val){document.getElementById(id).textContent=val;}
 
-/* ============ nav smooth scroll ============ */
 document.querySelectorAll('nav a').forEach(a=>{
-  a.addEventListener('click', e=>{
-    e.preventDefault();
+  a.addEventListener('click',e=>{e.preventDefault();
     document.querySelectorAll('nav a').forEach(x=>x.classList.remove('on'));
     a.classList.add('on');
     document.getElementById(a.dataset.go).scrollIntoView({behavior:'smooth'});
   });
 });
-
-/* ============ collapsible tree ============ */
 document.querySelectorAll('.tnode .hd').forEach(h=>{
-  h.addEventListener('click', ()=> h.parentElement.classList.toggle('open'));
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
 });
 
-/* ============ ③ funnel lab ============ */
-const labSteps = [
-  {
-    id:'add', txt:'已加入 CCl₄（密度大于水，沉于下层，与水分层但尚未萃取）。',
-    micro:'微观预告：CCl₄是非极性分子，I₂"更亲"它——一旦充分接触，I₂将大规模"搬家"。',
-    run(){
-      show('liqWater',1); show('liqCc4',1); hide('liqNewWater'); hide('liqNewCc4'); hide('liqMix');
-      document.getElementById('liqWater').setAttribute('y',110);
-      document.getElementById('liqWater').setAttribute('height',140);
-      setBtn('add',true); setBtn('shake',false);
-    }
-  },
-  {
-    id:'shake', txt:'倒转漏斗用力振荡，两相充分接触，液体变为混合乳状——I₂正在从水层迁入CCl₄层。',
-    micro:'振荡的作用：增大两相接触面积，加快分配平衡的建立。',
-    run(){
-      hide('liqWater'); hide('liqCc4'); show('liqMix');
-      animateShake();
-      setBtn('shake',true); setBtn('vent',false);
-    }
-  },
-  {
-    id:'vent', txt:'振荡后倒转漏斗使下口朝上，打开活塞放气——"嘶——"，内压已释放。（不放气会怎样？塞子可能被顶飞！）',
-    micro:'为什么放气：苯/CCl₄等易挥发 + 萃取过程温度变化 → 内压增大。放气口诀：下口朝上。',
-    run(){ setBtn('vent',true); setBtn('settle',false); }
-  },
-  {
-    id:'settle', txt:'静置后清晰分层：下层CCl₄层呈紫红色（I₂富集），上层水层近乎无色——萃取完成！',
-    micro:'但注意：下层是"I₂的CCl₄溶液"，不是纯I₂！萃取只是搬家+富集，还需蒸馏才能得单质。',
-    run(){
-      hide('liqMix'); show('liqNewWater'); show('liqNewCc4');
-      document.getElementById('layerLabel').setAttribute('opacity',1);
-      setBtn('settle',true); setBtn('separate',false);
-    }
-  },
-  {
-    id:'separate', txt:'先打开上口塞子（平衡气压），下层紫红色液体从下口放入烧杯，上层水层从上口倒出——分液完成 ✔',
-    micro:'先下后上、下放下层、上倒上层——理由：防止两层交叉污染。',
-    run(){
-      hide('liqNewCc4');
-      const b=document.getElementById('beakLiquid'); b.setAttribute('fill','#7c3aed'); b.setAttribute('opacity',1);
-      document.getElementById('drip').setAttribute('opacity',1);
-      addScore(5); setBtn('separate',true);
-      setStat('st2','完成');
-    }
-  }
+/* ③ lab */
+const distSteps=[
+  {id:'add',txt:'已加入乙醇–水混合液（≤1/2）并放入沸石。下一步点燃酒精灯。',micro:'沸石提供汽化中心，防止过热暴沸。',run(){
+      showInline('flaskLiq',1);showInline('boilStone',1);hideInline('vapor');hideInline('condDrop');hideInline('label78');
+      setBtn('add',true);setBtn('heat',false);
+  }},
+  {id:'heat',txt:'点燃加热，烧瓶中液体沸腾，温度计水银柱上升——乙醇（78℃）先达到沸点。',micro:'为什么先出乙醇？沸点低的组分优先汽化。温度计显示的是蒸气温度。',run(){
+      showInline('flame',1); setBtn('heat',true);setBtn('vapor',false);
+  }},
+  {id:'vapor',txt:'蒸气沿颈上升至支管，进入冷凝管——低沸点乙醇气相被"搬运"出来。',micro:'这一步是"相变"：液相→气相，利用沸点差把乙醇从混合物中富集到气相。',run(){
+      hideInline('flame'); showInline('vapor',1); setBtn('vapor',true);setBtn('condense',false);
+  }},
+  {id:'condense',txt:'蒸气在冷凝管中遇冷液化成液滴，沿管壁流入牛角管——"冷凝"完成。',micro:'冷凝水为何下进上出？逆流换热，冷凝更充分；高沸点蒸气要改用空气冷凝防炸裂。',run(){
+      hideInline('vapor'); showInline('condDrop',1); setBtn('condense',true);setBtn('collect',false);
+  }},
+  {id:'collect',txt:'馏出液滴入接收瓶，约 78℃ 的乙醇被收集 —— 蒸馏完成 ✔（注意：不可蒸干，先停火后停水）。',micro:'收集按沸点区间进行；不同沸点段对应不同组分，这就是"分段收集"。',run(){
+      hideInline('condDrop'); showInline('label78',1);
+      document.getElementById('recvLiq').setAttribute('width',44);
+      addScore(5);setStat('st2','完成'); setBtn('collect',true);
+  }}
 ];
-function show(id,op){ document.getElementById(id).setAttribute('opacity', op!==undefined?op:1); }
-function hide(id){ document.getElementById(id).setAttribute('opacity',0); }
-function setBtn(act, disabled){ const b=document.querySelector(`[data-act="${act}"]`); if(b) b.disabled = disabled; }
-function animateShake(){
-  const svg = document.getElementById('funnelSvg');
-  let n=0; const t=setInterval(()=>{
-    svg.style.transform = `rotate(${(n%2?4:-4)}deg)`; n++;
-    if(n>7){ clearInterval(t); svg.style.transform=''; }
-  },90);
-}
-let labIdx = 0;
+function showInline(id,op){var e=document.getElementById(id);if(e)e.setAttribute('opacity',op!==undefined?op:1);}
+function hideInline(id){var e=document.getElementById(id);if(e)e.setAttribute('opacity',0);}
+function setBtn(act,disabled){var b=document.querySelector('[data-act="'+act+'"]');if(b)b.disabled=disabled;}
+let distIdx=0;
 document.querySelectorAll('#labBtns .btn').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    const act = b.dataset.act;
+  b.addEventListener('click',()=>{
+    const act=b.dataset.act;
     if(act==='reset'){
-      labIdx=0;
-      ['liqWater','liqCc4','liqMix','liqNewWater','liqNewCc4','beakLiquid','drip'].forEach(hide);
-      document.getElementById('layerLabel').setAttribute('opacity',0);
-      document.getElementById('liqWater').setAttribute('y',120);
-      document.getElementById('liqWater').setAttribute('height',140);
-      document.getElementById('liqWater').setAttribute('opacity',1);
-      ['add','shake','vent','settle','separate'].forEach(a=>setBtn(a, act==='reset' ? false : false));
-      setBtn('add',false); setBtn('shake',true); setBtn('vent',true); setBtn('settle',true); setBtn('separate',true);
+      distIdx=0;
+      ['flame','vapor','condDrop','label78'].forEach(hideInline);
+      document.getElementById('recvLiq').setAttribute('width',0);
+      showInline('flaskLiq',1); showInline('boilStone',1);
       document.querySelectorAll('#rail .pill').forEach((p,i)=>{p.className='pill'+(i===0?' cur':'');});
-      renderStatus('<b>当前：</b>分液漏斗中盛有稀碘水（浅黄色）。碘在水中溶解度很小。<div class="micro">微观：水是极性溶剂，I<sub>2</sub>是非极性分子，"不太亲"，故溶解度小、浓度低。</div>');
+      renderStatus('<b>当前：</b>蒸馏烧瓶中加入乙醇–水混合液（体积≤1/2），并放入沸石（提供汽化中心）。<div class="micro">微观：沸石表面微孔成为气泡"出生点"，防止液体过热暴沸。</div>');
+      ['add','heat','vapor','condense','collect'].forEach(a=>setBtn(a,false));
+      setBtn('add',false);setBtn('heat',true);setBtn('vapor',true);setBtn('condense',true);setBtn('collect',true);
       return;
     }
-    const step = labSteps.find(s=>s.id===act);
-    if(!step || b.disabled) return;
+    const step=distSteps.find(s=>s.id===act);
+    if(!step||b.disabled)return;
     step.run();
-    const pills = document.querySelectorAll('#rail .pill');
-    pills.forEach((p,i)=>{
-      p.className = 'pill' + (i<labIdx+1 ? ' done' : (i===labIdx+1?' cur':''));
-    });
-    labIdx = Math.min(labIdx+1, 5);
-    renderStatus(`<b>当前：</b>${step.txt}<div class="micro">${step.micro}</div>`);
+    const pills=document.querySelectorAll('#rail .pill');
+    pills.forEach((p,i)=>{p.className='pill'+(i<distIdx+1?' done':(i===distIdx+1?' cur':''));});
+    distIdx=Math.min(distIdx+1,5);
+    renderStatus('<b>当前：</b>'+step.txt+'<div class="micro">'+step.micro+'</div>');
   });
 });
-function renderStatus(html){ document.getElementById('labStatus').innerHTML = html; }
+function renderStatus(html){document.getElementById('labStatus').innerHTML=html;}
 
-/* ============ ④ extractant cards ============ */
-let exDone = 0;
-document.querySelectorAll('.ex-card').forEach(c=>{
-  c.addEventListener('click', ()=>{
-    if(c.classList.contains('yes')||c.classList.contains('no')) return;
-    const ok = c.dataset.ok==='yes';
-    c.classList.add(ok?'yes':'no');
-    c.querySelector('.judge').textContent = ok?'✓':'✗';
+/* ④ */
+let partDone=0,varDone=0;
+document.querySelectorAll('#partGrid .ex-card').forEach(c=>{
+  c.addEventListener('click',()=>{
+    if(c.classList.contains('yes'))return;
+    c.classList.add('yes');c.querySelector('.judge').textContent='✓';
     c.querySelectorAll('.d')[1].style.display='block';
-    exDone++; setStat('st1', exDone);
-    if(exDone===1) addScore(1); else addScore(1);
+    partDone++;setStat('st1',partDone);addScore(1);
+  });
+});
+document.querySelectorAll('#varGrid .ex-card').forEach(c=>{
+  c.addEventListener('click',()=>{
+    if(c.classList.contains('yes'))return;
+    c.classList.add('yes');c.querySelector('.judge').textContent='✓';
+    c.querySelectorAll('.d')[1].style.display='block';
+    varDone++;setStat('st1b',varDone);addScore(1);
   });
 });
 
-/* ============ ⑤ sort game ============ */
-const correctOrder = [
-  '检查分液漏斗是否漏水（检漏）',
-  '将碘水和 CCl₄ 从上口倒入漏斗，塞好塞子',
-  '倒转漏斗振荡，并不时打开活塞放气',
-  '将漏斗放正静置，待液体清晰分层',
-  '打开上口塞子，下层从下口放出，上层从上口倒出'
+/* ⑤ sort */
+const correctOrder=[
+  '组装仪器（蒸馏烧瓶≤1/2 液体）并检查气密性',
+  '加入待蒸馏液与沸石（防暴沸）',
+  '先通入冷凝水（下进上出），再加热',
+  '控制加热，按沸点区间收集馏分',
+  '停止时先熄灭酒精灯，冷却后关闭冷凝水、拆卸'
 ];
-let items = [...correctOrder].sort(()=>Math.random()-0.5);
-const sortList = document.getElementById('sortList');
+let items=[...correctOrder].sort(()=>Math.random()-0.5);
+const sortList=document.getElementById('sortList');
 function renderSort(){
   sortList.innerHTML='';
   items.forEach((t,i)=>{
     const li=document.createElement('li');
-    li.className='sort-item'; li.draggable=true;
-    li.innerHTML=`<span class="idx">${i+1}</span><span>${t}</span>
-      <span class="mv"><button data-mv="-1">↑</button><button data-mv="1">↓</button></span>`;
-    li.addEventListener('dragstart',()=>{li.classList.add('dragging');});
-    li.addEventListener('dragend',()=>{li.classList.remove('dragging');});
+    li.className='sort-item';li.draggable=true;
+    li.innerHTML='<span class="idx">'+(i+1)+'</span><span>'+t+'</span><span class="mv"><button data-mv="-1">↑</button><button data-mv="1">↓</button></span>';
+    li.addEventListener('dragstart',()=>li.classList.add('dragging'));
+    li.addEventListener('dragend',()=>li.classList.remove('dragging'));
     li.addEventListener('dragover',e=>{
       e.preventDefault();
       const drag=document.querySelector('.dragging');
-      if(!drag||drag===li) return;
+      if(!drag||drag===li)return;
       const r=li.getBoundingClientRect();
-      const after = (e.clientY - r.top) > r.height/2;
-      if(after) li.after(drag); else li.before(drag);
+      const after=(e.clientY-r.top)>r.height/2;
+      if(after)li.after(drag);else li.before(drag);
       items=[...sortList.children].map(x=>x.querySelector('span:nth-child(2)').textContent);
     });
     li.querySelectorAll('[data-mv]').forEach(btn=>{
       btn.addEventListener('click',e=>{
         e.stopPropagation();
-        const d=+btn.dataset.mv; const j=i+d;
-        if(j<0||j>=items.length) return;
-        [items[i],items[j]]=[items[j],items[i]]; renderSort();
+        const d=+btn.dataset.mv;const j=i+d;
+        if(j<0||j>=items.length)return;
+        [items[i],items[j]]=[items[j],items[i]];renderSort();
       });
     });
     sortList.appendChild(li);
   });
 }
 renderSort();
-document.getElementById('sortShuffle').addEventListener('click',()=>{
-  items=[...correctOrder].sort(()=>Math.random()-0.5); renderSort();
-  document.getElementById('sortResult').innerHTML='';
-});
+document.getElementById('sortShuffle').addEventListener('click',()=>{items=[...correctOrder].sort(()=>Math.random()-0.5);renderSort();document.getElementById('sortResult').innerHTML='';});
 document.getElementById('sortCheck').addEventListener('click',()=>{
   const cur=[...sortList.children].map(x=>x.querySelector('span:nth-child(2)').textContent);
-  const right = cur.every((t,i)=>t===correctOrder[i]);
+  const right=cur.every((t,i)=>t===correctOrder[i]);
   const res=document.getElementById('sortResult');
-  if(right){
-    res.innerHTML='<span style="color:var(--green);font-weight:700">✔ 全部正确！注意顺序背后的逻辑链：防损失(检漏)→促分配(振荡)→防喷液(放气)→待分层(静置)→防混层(分液)。</span>';
-    addScore(5); setStat('st2','正确');
-  }else{
-    let firstWrong = cur.findIndex((t,i)=>t!==correctOrder[i]);
-    res.innerHTML=`<span style="color:var(--red)">✘ 第 ${firstWrong+1} 步有误。提示：想想"先保安全防损失，再促接触后分离"。</span>`;
-  }
+  if(right){res.innerHTML='<span style="color:var(--green);font-weight:700">✔ 全部正确！逻辑链：防损失(气密/沸石)→促汽化(加热)→保冷凝(冷凝水)→按沸点收集→安全拆卸(先火后水)。</span>';addScore(5);setStat('st2','正确');}
+  else{let f=cur.findIndex((t,i)=>t!==correctOrder[i]);res.innerHTML='<span style="color:var(--red)">✘ 第 '+(f+1)+' 步有误。提示：先保安全与防暴沸，再加热、冷凝、收集，最后注意"先停火后停水"。</span>';}
 });
 
-/* ============ ⑤ true/false ============ */
-const tfData = [
-  {s:'振荡后应立即打开活塞把液体放出。', ok:false,
-   e:'✗ 振荡后必须先放气、再静置分层，液体未分层时放液将两相混出，前功尽弃。'},
-  {s:'分液时，上层液体也可以从下口放出，更方便。', ok:false,
-   e:'✗ 上层液体若从下口放出，会流经已沾有下层液体的漏斗颈与活塞，造成交叉污染。规范：下层下口放，上层上口倒。'},
-  {s:'放气时，应使漏斗下口朝上，再打开活塞。', ok:true,
-   e:'✓ 放气口诀"下口朝上"——使气体（而非液体）从活塞口逸出，安全且不损失液体。'},
-  {s:'萃取完成后，得到的有机层就是纯净的目标产品。', ok:false,
-   e:'✗ 萃取只是"搬家+富集"，得到的是目标物的萃取剂溶液，还需干燥、蒸馏等后续操作（2023福建卷：萃取→蒸馏得苯甲醇）。'}
+/* ⑤ tf */
+const tfData=[
+  {s:'加热后才发现未加沸石，应立即向热液中补加几粒。',ok:false,e:'✗ 必须<b>先停止加热、冷却后再补加</b>，否则热液遇沸石会瞬间剧烈暴沸喷溅。'},
+  {s:'温度计水银球应浸入液面以下，以测液体温度。',ok:false,e:'✗ 温度计应位于<b>蒸馏烧瓶支管口处</b>，测的是即将进入冷凝管的蒸气温度（馏分沸点）。'},
+  {s:'冷凝管中冷却水应从下口进、上口出。',ok:true,e:'✓ 下进上出形成逆流换热，冷凝更充分；同时减缓玻璃因骤冷而炸裂。'},
+  {s:'蒸馏结束时，应先关闭冷凝水，再熄灭酒精灯。',ok:false,e:'✗ 顺序相反：<b>先熄灭酒精灯</b>，待冷却后再关闭冷凝水，否则可能倒吸或余热使残留蒸气逸出。'}
 ];
-let tfDone = 0, tfRight = 0;
-const tfWrap = document.getElementById('tfWrap');
+let tfDone=0,tfRight=0;
+const tfWrap=document.getElementById('tfWrap');
 tfData.forEach((q,i)=>{
   const d=document.createElement('div');
   d.style.cssText='border-bottom:1px dashed var(--line);padding:12px 0;';
-  d.innerHTML=`<p style="font-size:15px"><b>${i+1}.</b> ${q.s}</p>
-    <button class="btn ghost tfb" data-i="${i}" data-v="1">正确</button>
-    <button class="btn ghost tfb" data-i="${i}" data-v="0">错误</button>
-    <div class="explain" id="tfe${i}"><b>解析：</b>${q.e}</div>`;
+  d.innerHTML='<p style="font-size:15px"><b>'+(i+1)+'.</b> '+q.s+'</p><button class="btn ghost tfb" data-i="'+i+'" data-v="1">正确</button><button class="btn ghost tfb" data-i="'+i+'" data-v="0">错误</button><div class="explain" id="tfe'+i+'"><b>解析：</b>'+q.e+'</div>';
   tfWrap.appendChild(d);
 });
-tfWrap.addEventListener('click', e=>{
-  const b=e.target.closest('.tfb'); if(!b||b.disabled) return;
-  const i=+b.dataset.i, v=b.dataset.v==='1';
-  const q=tfData[i];
-  const ex=document.getElementById('tfe'+i); ex.classList.add('show');
-  document.querySelectorAll(`.tfb[data-i="${i}"]`).forEach(x=>{x.disabled=true;});
-  if(v===q.ok){ b.style.background='var(--green)'; b.style.color='#fff'; b.style.borderColor='var(--green)'; tfRight++; addScore(2);} 
-  else { b.style.background='var(--red)'; b.style.color='#fff'; b.style.borderColor='var(--red)'; }
-  tfDone++; setStat('st3', tfRight);
+tfWrap.addEventListener('click',e=>{
+  const b=e.target.closest('.tfb');if(!b||b.disabled)return;
+  const i=+b.dataset.i,v=b.dataset.v==='1';const q=tfData[i];
+  document.getElementById('tfe'+i).classList.add('show');
+  document.querySelectorAll('.tfb[data-i="'+i+'"]').forEach(x=>x.disabled=true);
+  if(v===q.ok){b.style.background='var(--green)';b.style.color='#fff';b.style.borderColor='var(--green)';tfRight++;addScore(2);}
+  else{b.style.background='var(--red)';b.style.color='#fff';b.style.borderColor='var(--red)';}
+  tfDone++;setStat('st3',tfRight);
 });
 
-/* ============ ⑦ quiz ============ */
-function checkFill(btn){
-  const sels = btn.parentElement.querySelectorAll('.fillselect');
-  let right=0, total=sels.length, answered=true;
-  sels.forEach(s=>{
-    if(!s.value) answered=false;
-    s.style.borderColor='var(--line)';
+/* ⑦ quiz */
+function bindChoice(wrapId,correctIdx,explainId,score){
+  document.querySelectorAll('#'+wrapId+' .opt').forEach((b,i)=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#'+wrapId+' .opt').forEach(x=>x.disabled=true);
+      if(i===correctIdx){b.classList.add('ok');addScore(score);}
+      else{b.classList.add('no');document.querySelectorAll('#'+wrapId+' .opt')[correctIdx].classList.add('ok');}
+      document.getElementById(explainId).classList.add('show');
+    });
   });
-  if(!answered){ alert('请先完成所有填空选择'); return; }
-  sels.forEach(s=>{
-    if(s.value===s.dataset.ans){ s.style.borderColor='var(--green)'; s.style.background='var(--green-bg)'; right++; }
-    else { s.style.borderColor='var(--red)'; s.style.background='var(--red-bg)'; }
-  });
-  document.getElementById('ex1').classList.add('show');
-  btn.disabled=true;
-  addScore(right);
-  setStat('st4', right + '/' + total + ' + T8');
 }
-document.querySelectorAll('#q2opts .opt').forEach((b,i)=>{
-  b.addEventListener('click', ()=>{
-    document.querySelectorAll('#q2opts .opt').forEach(x=>{x.disabled=true;});
-    if(i===3){ b.classList.add('ok'); addScore(5); }
-    else { b.classList.add('no'); document.querySelectorAll('#q2opts .opt')[3].classList.add('ok'); }
-    document.getElementById('ex2').classList.add('show');
-  });
-});
+bindChoice('q2opts',3,'ex2',5);
+bindChoice('q3opts',2,'ex3',5);
+bindChoice('q1opts',1,'ex1',5);
 
-/* ============ ⑧ checklist ============ */
-const checks = [
-  '我能用"溶解度差异 + 相似相溶"解释萃取分层现象',
-  '我能默写萃取剂三条件并据此判断试剂能否作萃取剂',
-  '我能说出操作五步及每一步"为什么"（检漏/振荡/放气/静置/分液）',
-  '我能由萃取剂密度判断有机层上下及放出方式',
-  '我理解"萃取→分液→蒸馏"的方法组合链，并知道萃取不是提纯终点'
+/* ⑧ checklist */
+const checks=[
+  '我能用"沸点/挥发性差异"解释蒸馏为什么能分离',
+  '我知道温度计在支管口、冷凝水下进上出、沸石防暴沸的原因',
+  '我能区分普通蒸馏、分馏、减压蒸馏、水蒸气蒸馏的适用场景',
+  '我能说出蒸馏操作顺序与"先停火后停水"的安全逻辑',
+  '我理解"萃取/分液 ↔ 蒸馏"的方法组合链，知道蒸馏不是提纯终点'
 ];
 let ckDone=0;
 const cl=document.getElementById('checkList');
 checks.forEach((t,i)=>{
-  const lab=document.createElement('label');
-  lab.style.cssText='display:block;cursor:pointer;';
-  lab.innerHTML=`<input type="checkbox" style="transform:scale(1.25);margin-right:10px;">${t}`;
+  const lab=document.createElement('label');lab.style.cssText='display:block;cursor:pointer;';
+  lab.innerHTML='<input type="checkbox" style="transform:scale(1.25);margin-right:10px;">'+t;
   lab.querySelector('input').addEventListener('change',e=>{
-    ckDone += e.target.checked?1:-1;
-    setStat('st5', ckDone);
+    ckDone+=e.target.checked?1:-1;setStat('st5',ckDone);
     const msg=document.getElementById('overallMsg');
-    if(ckDone===5) msg.textContent='🏅 结构化目标全部达成！进入迁移追问与分层作业吧。';
-    else if(ckDone>=3) msg.textContent='👍 基本达成，薄弱项回到对应模块（②③④）再过一遍。';
+    if(ckDone===5)msg.textContent='🏅 结构化目标全部达成！进入迁移追问与分层作业吧。';
+    else if(ckDone>=3)msg.textContent='👍 基本达成，薄弱项回到对应模块（②③④）再过一遍。';
     else msg.textContent='💪 回到本页上方对应模块重新梳理，再来自检。';
   });
   cl.appendChild(lab);
